@@ -17,9 +17,9 @@ func main() {
 	awsAccessKey := os.Getenv("AWS_ACCESS_KEY_ID")
 	awsSecret := os.Getenv("AWS_SECRET_ACCESS_KEY")
 	awsRegion := os.Getenv("AWS_REGION")
+	lbResource := os.Getenv("ELB_RESOURCE")
 	UnhealthyThresholdCount := 2
 	HealthCheckIntervalSeconds := 7
-	lbResource := "arn:aws:elasticloadbalancing:ap-south-1:379434283010:loadbalancer/app/Staging/42db6c66a102a70f"
 	token := ""
 
 	creds := credentials.NewStaticCredentials(awsAccessKey, awsSecret, token)
